@@ -8,7 +8,7 @@ from random import randint
 from time import sleep
 from botocore.vendored import requests
 
-API_KEY = 'd7d57a7d3bf8485abf873f3f95a8e61b'
+API_KEY = 'API_KEY'
 API_ENDPOINT = ''
 
 def lambda_handler(event, context):
@@ -16,7 +16,7 @@ def lambda_handler(event, context):
         
     text = str(get_text(event["decryptedBucket"], event["decryptedKey"]))
     data = {'text': text}
-    key = 'd7d57a7d3bf8485abf873f3f95a8e61b'
+    key = 'API_KEY'
 
 
     params = {'lang': event['sourceLanguage'], 'mode': 'proof', 'text': text}
